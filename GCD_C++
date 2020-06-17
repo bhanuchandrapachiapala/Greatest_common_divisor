@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+void gcd(long long a,long long n)
+{
+	long long g1,g2;
+	while(a!=0 && n!=0){
+		g1=max(a,n);
+		g2=min(a,n);
+		n=g2;
+		a=g1%n;
+	}
+	cout<<max(a,n);
+}
+int main()
+{
+	long long n,a;
+	cin>>a>>n;
+	gcd(a,n);
+	return 0;
+}
